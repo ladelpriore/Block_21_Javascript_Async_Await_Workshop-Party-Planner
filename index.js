@@ -19,10 +19,11 @@ document.addEventListener('DOMContentLoaded', function () {   //The API event da
     parties.forEach(party => {      //Create a new array for the events data, and go through each array item 
       const li = document.createElement('li');    //Create for each array item a new li list element in the DOM
       li.innerHTML = `    
-        <h3>${party.name}</h3>
-        <p>${party.description}</p>
-        <p><strong>Date:</strong> ${new Date(party.date).toLocaleDateString()}</p>
-        <p><strong>Location:</strong> ${party.location}</p>
+        <h3>${party.name}</h3>    
+        <p>Date: ${party.date}</p>
+        <p>Time: ${party.time}</p>
+        <p>Location: ${party.location}</p>
+        <p>Description: ${party.description}</p>
       `;                                                                                                            
       eventsList.appendChild(li);      //Append the new array and list of events and their details                                                                             
     });
